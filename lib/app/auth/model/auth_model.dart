@@ -1,8 +1,10 @@
-class AuthModel{
-  int id;
-  String name;
-  String email;
-  String password;
+class AuthModel {
+  int? id;
+  String? name;
+  String? email;
+  String? password;
+  String? confirmPassword;
 
-  AuthModel({required this.id, required this.name, required this.email, required this.password});
+  AuthModel(
+      {this.id, this.name, this.email, this.password, this.confirmPassword});
 }

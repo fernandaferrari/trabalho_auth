@@ -33,5 +33,6 @@ String get auth => '''
     name TEXT,
     email TEXT,
     password TEXT,
+    confirm_password TEXT
   );
   ''';
