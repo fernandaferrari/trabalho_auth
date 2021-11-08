@@ -150,7 +150,8 @@ class _CadastroAuthState extends ModularState<CadastroAuth, AuthController> {
                           obscureText: true,
                           label: 'Confirme sua senha',
                           descText: 'Digite sua senha...',
-                          onSaved: (senha) => _formData.password = senha ?? '',
+                          onSaved: (senha) =>
+                              _formData.confirmPassword = senha ?? '',
                           validator: (confirmPassword) {
                             if (confirmPassword == null ||
                                 confirmPassword.isEmpty) {
