@@ -57,7 +57,9 @@ class _AuthPageState extends ModularState<AuthPage, AuthController> {
                     width: double.infinity,
                     child: RaisedButton(
                       color: Theme.of(context).primaryColor,
-                      onPressed: () {},
+                      onPressed: () {
+                        Modular.to.navigate('/home');
+                      },
                       child: Text("Entrar"),
                     ),
                   )

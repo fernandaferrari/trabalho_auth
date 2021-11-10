@@ -42,7 +42,7 @@ class AuthRepository {
     });
 
     final response = await http.post(
-        Uri.parse('https://auth-4f5c3-default-rtdb.firebaseio.com/auth.json'),
+        Uri.parse('https://auth2-b9ed3-default-rtdb.firebaseio.com/auth.json'),
         body: jsonEncode({
           'id': id,
           'name': auth.name,
