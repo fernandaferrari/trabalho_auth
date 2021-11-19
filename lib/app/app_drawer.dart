@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:trabalho/app/routes/app_routes.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key? key}) : super(key: key);
@@ -10,25 +10,39 @@ class AppDrawer extends StatelessWidget {
       child: Column(
         children: [
           AppBar(
-            title: const Text('Bem vindo Usuário!'),
+            title: Text('Bem vindo Uusário!'),
             automaticallyImplyLeading: false,
           ),
-          const Divider(),
+          Divider(),
           ListTile(
-            leading: const Icon(Icons.shop),
-            title: Text('Página Inicial'),
+            leading: Icon(Icons.shop),
+            title: Text('Loja'),
             onTap: () {
-              Modular.to.pushNamed("/home");
+              Navigator.of(context).pushReplacementNamed(
+                AppRoutes.AUTH_OR_HOME,
+              );
             },
           ),
-          const Divider(),
-          ListTile(
-            leading: const Icon(Icons.door_back_door_outlined),
-            title: const Text('Deslogar'),
-            onTap: () {
-              Modular.to.pushNamed("/");
-            },
-          ),
+          // Divider(),
+          // ListTile(
+          //   leading: Icon(Icons.payment),
+          //   title: Text('Pedidos'),
+          //   onTap: () {
+          //     Navigator.of(context).pushReplacementNamed(
+          //       AppRoutes.ORDERS,
+          //     );
+          //   },
+          // ),
+          // Divider(),
+          // ListTile(
+          //   leading: Icon(Icons.edit),
+          //   title: Text('Gerenciar Produtos'),
+          //   onTap: () {
+          //     Navigator.of(context).pushReplacementNamed(
+          //       AppRoutes.PRODUCTS,
+          //     );
+          //   },
+          // ),
         ],
       ),
     );
